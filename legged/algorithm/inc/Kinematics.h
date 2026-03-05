@@ -22,8 +22,15 @@ typedef struct
     const float l_haa;
     const float l_hfe;
     const float l_kfe;
-    
     const float Stand_Foot_Pos[3];
+
+    float HAA_Angle;
+    float HFE_Angle;
+    float KFE_Angle;
+    
+    float HAA_Angvel;
+    float HFE_Angvel;
+    float KFE_Angvel;
 }Leg_Param;
 
 typedef struct
@@ -36,8 +43,9 @@ typedef struct
     
     Leg_Foot Foot_Exp;
     Leg_Foot Foot_Obs;
-    
-    Leg_Param Param;
+
+    Leg_Param Param_Exp;
+    Leg_Param Param_Obs;
 }Leg;
 
 
