@@ -29,6 +29,8 @@
 "legged\bsp_uart.o"
 "legged\motor.o"
 "legged\kinematics.o"
+"legged\pid.o"
+"legged\trajectory.o"
 --strict --scatter "legged\legged.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

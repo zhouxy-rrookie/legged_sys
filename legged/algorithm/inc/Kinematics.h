@@ -31,6 +31,10 @@ typedef struct
     float HAA_Angvel;
     float HFE_Angvel;
     float KFE_Angvel;
+    
+    float HAA_Torque;
+    float HFE_Torque;
+    float KFE_Torque;
 }Leg_Param;
 
 typedef struct

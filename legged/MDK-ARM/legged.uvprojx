@@ -562,6 +562,16 @@
               <FileType>1</FileType>
               <FilePath>..\algorithm\src\Kinematics.c</FilePath>
             </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\algorithm\src\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>trajectory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\algorithm\src\trajectory.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
