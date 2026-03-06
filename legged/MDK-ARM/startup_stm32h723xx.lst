@@ -1274,10 +1274,10 @@ ARM Macro Assembler    Page 20
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --depen
-d=legged\startup_stm32h723xx.d -olegged\startup_stm32h723xx.o -I.\RTE\_legged -
-ID:\MDK5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include --predefine="__UVISION_VER
-SION SETA 526" --predefine="_RTE_ SETA 1" --predefine="STM32H723xx SETA 1" --li
-st=startup_stm32h723xx.lst startup_stm32h723xx.s
+d=legged\startup_stm32h723xx.d -olegged\startup_stm32h723xx.o -I../Drivers/CMSI
+S/Include -I.\RTE\_legged -ID:\MDK5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+ --predefine="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --predefin
+e="STM32H723xx SETA 1" --list=startup_stm32h723xx.lst startup_stm32h723xx.s
 
 
 

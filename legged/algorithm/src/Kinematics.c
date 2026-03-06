@@ -219,7 +219,7 @@ void Foot_Force_Estimate(Leg *leg)
     
     if(leg->ID % 2 == 1)
         leg->Foot_Obs.FootForce[1] = -leg->Foot_Obs.FootForce[1];
-}
+}                                                                                                                           
 
 void Motor_Torque_Compute(Leg *leg)
 {
@@ -239,3 +239,5 @@ void Motor_Torque_Compute(Leg *leg)
     
     Joint_To_Motor_Torque(leg);
 }
+
+

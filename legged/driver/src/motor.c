@@ -73,8 +73,6 @@ HAL_StatusTypeDef SERVO_Send_recv(MOTOR_send *pData, MOTOR_recv *rData)
 
 	SET_485_RE2();
     HAL_UARTEx_ReceiveToIdle(&huart2, (uint8_t *)rData, sizeof(rData->motor_recv_data), &rxlen, 10);
-	//HAL_UARTEx_ReceiveToIdle_DMA(&huart2, (uint8_t *)rData, sizeof(rData->motor_recv_data));
-		
 
     if(rxlen == 0)
 

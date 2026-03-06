@@ -53,6 +53,6 @@ typedef struct
 }Leg;
 
 
-
+extern Leg FL_Leg, FR_Leg, RL_Leg, RR_Leg;
 
 #endif
