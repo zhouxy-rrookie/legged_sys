@@ -55,4 +55,18 @@ typedef struct
 
 extern Leg FL_Leg, FR_Leg, RL_Leg, RR_Leg;
 
+void Pos_To_Angle(Leg *leg);
+void Angle_To_Pos(Leg *leg);
+void Leg_Forward_Kinematics_Pos(Leg *leg);
+int Leg_Inverse_Kinematics(Leg *leg);
+void Vel_To_Angvel(Leg *leg);
+void Angvel_To_Vel(Leg *leg);
+void Jacobi_Compute(Leg *leg, float J[3][3]);
+void Leg_Forward_Kinematics_Vel(Leg *leg);
+int matrix_invert(float m[3][3], float inv[3][3]);
+void Motor_To_Joint_Torque(Leg *leg);
+void Joint_To_Motor_Torque(Leg *leg);
+void Foot_Force_Estimate(Leg *leg);
+void Motor_Torque_Compute(Leg *leg);
+
 #endif

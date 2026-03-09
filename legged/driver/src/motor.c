@@ -18,8 +18,6 @@ int modify_data(MOTOR_send *motor_s)
     motor_s->motor_send_data.head[0] = 0xFE;
     motor_s->motor_send_data.head[1] = 0xEE;
 	
-//		SATURATE(motor_s->id,   0,    15);
-//		SATURATE(motor_s->mode, 0,    7);
 		SATURATE(motor_s->K_P,  0.0f,   25.599f);
 		SATURATE(motor_s->K_W,  0.0f,   25.599f);
 		SATURATE(motor_s->T,   -127.99f,  127.99f);
@@ -41,7 +39,6 @@ int extract_data(MOTOR_recv *motor_r)
 {
     if(motor_r->motor_recv_data.CRC16 !=
         crc_ccitt(0, (uint8_t *)&motor_r->motor_recv_data, 14)){
-        // printf("[WARNING] Receive data CRC error");
         motor_r->correct = 0;
         return motor_r->correct;
     }
@@ -69,8 +66,6 @@ HAL_StatusTypeDef SERVO_Send_recv(MOTOR_send *pData, MOTOR_recv *rData)
     
 	SET_485_TR2();
     HAL_UART_Transmit(&huart2, (uint8_t *)pData, sizeof(pData->motor_send_data), 10); 
-		
-
 	SET_485_RE2();
     HAL_UARTEx_ReceiveToIdle(&huart2, (uint8_t *)rData, sizeof(rData->motor_recv_data), &rxlen, 10);
 
@@ -88,6 +83,6 @@ HAL_StatusTypeDef SERVO_Send_recv(MOTOR_send *pData, MOTOR_recv *rData)
         extract_data(rData);
         return HAL_OK;
     }
-    
     return HAL_ERROR;
 }
+

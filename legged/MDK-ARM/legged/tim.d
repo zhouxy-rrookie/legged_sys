@@ -1,5 +1,4 @@
-legged/bsp_tim.o: ../bsp/src/bsp_tim.c ../bsp/inc\bsp_tim.h \
-  ../Core/Inc\tim.h ../Core/Inc/main.h \
+legged/tim.o: ../Core/Src/tim.c ../Core/Inc\tim.h ../Core/Inc/main.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc\stm32h7xx_hal.h \
   ../Core/Inc\stm32h7xx_hal_conf.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc\stm32h7xx_hal_rcc.h \
